@@ -6,24 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_main"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            />
+
+        <Spinner
+            android:id="@+id/label_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <Button
+            android:id="@+id/button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showText"
+            android:text="@string/mostrar"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="showText"
-        android:text="@string/mostrar"
-        />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
-    <EditText
-        android:id="@+id/edit_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button_main"
-        android:inputType="textAutoCorrect|textCapSentences|textEmailAddress"
-        />
+        <TextView
+            android:id="@+id/title_phonelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"/>
+
+        <TextView
+            android:id="@+id/text_phonelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nothing_entered"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
