@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Keyboard Samples</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="enter">Escribe algo</string>
+</resources>
